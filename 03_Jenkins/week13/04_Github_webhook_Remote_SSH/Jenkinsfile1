@@ -7,7 +7,6 @@ pipeline {
         REMOTE_HOST     = 'nkhing4116@34.142.157.243' // Replace with your actual username and remote IP.
         SSH_CREDENTIALS = 'ssh_good_instances' // Use the ID of the Jenkins stored SSH credentials.
     }
-
     stages {
         stage('Login to Docker Hub') {
             steps {
@@ -20,7 +19,7 @@ pipeline {
 
         stage('Run Docker on Remote Server') {
             steps {
-                // Uses the SSH Agent plugin to setup SSH credentials.
+                // Uses the SSH Agent plugin to setup SSH credentials eiei.
                 sshagent([SSH_CREDENTIALS]) {
                     // These commands manage Docker containers on the remote server.
                     // It stops and removes all containers, then removes all images, before running a new container.
