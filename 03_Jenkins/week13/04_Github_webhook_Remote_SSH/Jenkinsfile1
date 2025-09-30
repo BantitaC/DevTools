@@ -19,7 +19,7 @@ pipeline {
 
         stage('Run Docker on Remote Server') {
             steps {
-                // Uses the SSH Agent plugin to setup SSH credentials eiei.
+                // Uses the SSH Agent plugin to setup SSH credentials eiei2.
                 sshagent([SSH_CREDENTIALS]) {
                     // These commands manage Docker containers on the remote server.
                     // It stops and removes all containers, then removes all images, before running a new container.
